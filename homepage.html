@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matthew's Homepage</title>
+    <style>
+        /* Basic styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            color: #666;
+        }
+
+        /* Fade in and fade out animations */
+        .fade-in {
+            animation: fadeIn 2s;
+        }
+
+        .fade-out {
+            animation: fadeOut 2s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes fadeOut {
+            from { opacity: 1; }
+            to { opacity: 0; }
+        }
+
+        /* Section styles */
+        .section {
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="fade-in">Welcome to Matthew's Homepage</h1>
+        
+        <!-- Profile Section -->
+        <div id="profile" class="section fade-in">
+            <h2>About Me</h2>
+            <p>Hi, I'm Matthew, a Mechanical Engineering student at the University of Queensland.</p>
+            <p>I enjoy playing League of Legends and exploring different strategies in the game.</p>
+        </div>
+
+        <!-- Game Section -->
+        <div id="game" class="section fade-in">
+            <h2>My Favorite Game</h2>
+            <p>League of Legends is my go-to game. It's a complex and competitive game that I love to play in my free time.</p>
+        </div>
+
+        <!-- I Hate School Section -->
+        <div id="i-hate-school" class="section fade-in">
+            <h2>I Hate School</h2>
+            <p>To be honest, I really don't like ENG1001. It's just not my thing!</p>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript for fade in and fade out animations
+        document.addEventListener('DOMContentLoaded', function () {
+            let sections = document.querySelectorAll('.section');
+
+            sections.forEach((section, index) => {
+                setTimeout(() => {
+                    section.classList.remove('fade-in');
+                    section.classList.add('fade-out');
+                }, (index + 1) * 5000); // fade out each section after 5 seconds
+            });
+        });
+    </script>
+</body>
+</html>
